@@ -1,6 +1,4 @@
-![Prettier Banner](https://unpkg.com/prettier-logo@1.0.3/images/prettier-banner-light.svg)
-
-<h2 align="center">Opinionated Code Formatter</h2>
+# prettier-m - a less opinionated fork of Prettier
 
 <p align="center">
   <em>
@@ -60,7 +58,7 @@
 
 ## Intro
 
-Prettier is an opinionated code formatter. It enforces a consistent style by parsing your code and re-printing it with its own rules that take the maximum line length into account, wrapping code when necessary.
+An unofficial fork of the Prettier code formatter, intended to provide some additional options to help more customize prettier options.
 
 ### Input
 
@@ -80,29 +78,20 @@ foo(
 );
 ```
 
-Prettier can be run [in your editor](https://prettier.io/docs/en/editors.html) on-save, in a [pre-commit hook](https://prettier.io/docs/en/precommit.html), or in [CI environments](https://prettier.io/docs/en/cli.html#list-different) to ensure your codebase has a consistent style without devs ever having to post a nit-picky comment on a code review ever again!
+## CLI Usage
 
----
+**Quick CLI usage:**
 
-**[Documentation](https://prettier.io/docs/en/)**
-
-<!-- prettier-ignore -->
-[Install](https://prettier.io/docs/en/install.html) ·
-[Options](https://prettier.io/docs/en/options.html) ·
-[CLI](https://prettier.io/docs/en/cli.html) ·
-[API](https://prettier.io/docs/en/api.html)
-
-**[Playground](https://prettier.io/playground/)**
-
----
-
-## Badge
-
-Show the world you're using _Prettier_ → [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
-
-```md
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+```sh
+prettier <options> <file(s)>
 ```
+
+## Additional prettier-m options
+
+- `--array-bracket-spacing` (`arrayBracketSpacing: true`): Put spaces between array brackets (similar to the corresponding eslint option). Status: experimental, with limited testing.
+- `--break-before-else` (`breakBeforeElse: true`): Always add a line break before else.
+- `--break-long-method-chains` (`breakLongMethodChains: true`): Break method chains with more than 3 method calls, like Prettier 1.x.
+- `--no-indent-chains` (`indentChains: false`): Disable indents at the start of chained calls.
 
 ## Contributing
 

@@ -516,19 +516,24 @@ function printPathNoParens(path, options, print, args) {
       parts.push(opening);
 
       if (node.alternate) {
+        //[prettier-m] --break-before-else option support
         const commentOnOwnLine =
           hasComment(
             node.consequent,
-            CommentCheckFlags.Trailing | CommentCheckFlags.Line
+            options.breakBeforeElse
+              ? CommentCheckFlags.Trailing
+              : CommentCheckFlags.Trailing | CommentCheckFlags.Line
           ) || needsHardlineAfterDanglingComment(node);
         const elseOnSameLine =
-          node.consequent.type === "BlockStatement" && !commentOnOwnLine;
+          node.consequent.type === "BlockStatement" &&
+          !commentOnOwnLine &&
+          !options.breakBeforeElse;
         parts.push(elseOnSameLine ? " " : hardline);
 
         if (hasComment(node, CommentCheckFlags.Dangling)) {
           parts.push(
             printDanglingComments(path, options, true),
-            commentOnOwnLine ? hardline : " "
+            commentOnOwnLine || options.breakBeforeElse ? hardline : " "
           );
         }
 

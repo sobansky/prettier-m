@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`array-bracket-test.js - {"arrayBracketSpacing":true} format 1`] = `
+====================================options=====================================
+arrayBracketSpacing: true
+parsers: ["babel", "babel-flow", "typescript"]
+printWidth: 80
+                                                                                | printWidth
+=====================================input======================================
+const arr = () => {
+    const days = ["Mon", "Thue", "Wed"];
+}
+=====================================output=====================================
+const arr = () => {
+  const days = [ "Mon", "Thue", "Wed" ];
+};
+
+================================================================================
+`;

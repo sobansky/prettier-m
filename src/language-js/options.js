@@ -99,4 +99,29 @@ module.exports = {
     ],
   },
   singleAttributePerLine: commonOptions.singleAttributePerLine,
+  breakBeforeElse: {
+    category: CATEGORY_JAVASCRIPT,
+    type: "boolean",
+    default: false,
+    description: "Always add a line break before else."
+  },
+  indentChains: {
+    category: CATEGORY_JAVASCRIPT,
+    type: "boolean",
+    default: false,
+    description: "Put indents at the start of chained calls.",
+    oppositeDescription: "Disable indents at the start of chained calls."
+  },
+  breakLongMethodChains: {
+    category: CATEGORY_JAVASCRIPT,
+    type: "boolean",
+    default: false,
+    description: "Break method chains with more than 3 method calls"
+  },
+  arrayBracketSpacing: {
+    category: CATEGORY_JAVASCRIPT,
+    type: "boolean",
+    default: false,
+    description: "Put spaces between array brackets (similar to the corresponding eslint option)."
+  }
 };

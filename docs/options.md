@@ -467,3 +467,42 @@ Valid options:
 | Default | CLI Override                  | API Override                     |
 | ------- | ----------------------------- | -------------------------------- |
 | `false` | `--single-attribute-per-line` | `singleAttributePerLine: <bool>` |
+
+#
+**Extra options**
+
+## Array bracket spacing
+
+Put spaces between array brackets (similar to the corresponding eslint option). Status: experimental, with limited testing.
+
+| Default | CLI Override              | API Override                  |
+| ------- | ------------------------- | ----------------------------- |
+| `false` | `--array-bracket-spacing` | `arrayBracketSpacing: <bool>` |
+
+## Break before else
+
+Always add a line break before else.
+
+| Default | CLI Override          | API Override              |
+| ------- | --------------------- | ------------------------- |
+| `false` | `--break-before-else` | `breakBeforeElse: <bool>` |
+
+## Break long method chains
+
+Break method chains with more than 3 method calls.
+
+| Default | CLI Override                 | API Override                    |
+| ------- | ---------------------------- | ------------------------------- |
+| `false` | `--break-long-method-chains` | `breakLongMethodChains: <bool>` |
+
+## Indent chains
+Put or disable indents at the start of chained calls.
+
+Valid options
+- `true` - Put indents at the start of chained calls.
+- `false` - Disable indents at the start of chained calls.
+
+| Default | CLI Override         | API Override           |
+| ------- | -------------------- | ---------------------- |
+| `true`  | `--no-indent-chains` | `indentChains: <bool>` |
+

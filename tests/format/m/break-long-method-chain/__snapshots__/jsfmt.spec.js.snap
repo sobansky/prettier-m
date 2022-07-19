@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`long-method-chain.js - {"breakLongMethodChains":true} format 1`] = `
+====================================options=====================================
+breakLongMethodChains: true
+parsers: ["babel", "babel-flow", "flow", "typescript"]
+printWidth: 80
+                                                                                | printWidth
+=====================================input======================================
+obj.first(a).second(b).third(c);
+=====================================output=====================================
+obj
+.first(a)
+.second(b)
+.third(c);
+
+================================================================================
+`;

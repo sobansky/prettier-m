@@ -31,6 +31,7 @@ const {
 } = require("./utils/index.js");
 const { locStart, locEnd } = require("./loc.js");
 const isBlockComment = require("./utils/is-block-comment.js");
+const options = require("./options.js");
 
 /**
  * @typedef {import("./types/estree").Node} Node
@@ -202,7 +203,8 @@ function handleIfStatementComments({
     precedingNode === enclosingNode.consequent &&
     followingNode === enclosingNode.alternate
   ) {
-    if (precedingNode.type === "BlockStatement") {
+    //[prettier-m] --breakBeforeElse option support
+    if (precedingNode.type === "BlockStatement" && !options.breakBeforeElse) {
       addTrailingComment(precedingNode, comment);
     } else {
       const isSingleLineComment =
