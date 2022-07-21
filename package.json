@@ -1,6 +1,6 @@
 {
 	"name": "prettier-m",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Prettier-M is a less opinionated code formatter",
 	"bin": "./bin/prettier.js",
 	"repository": "sobansky/prettier-m",
@@ -12,7 +12,13 @@
 	"engines": {
 		"node": ">=14"
 	},
-	"files": [ "index.js", "standalone.js", "src", "bin", "vendors" ],
+	"files": [
+		"index.js",
+		"standalone.js",
+		"src",
+		"bin",
+		"vendors"
+	],
 	"dependencies": {
 		"@angular/compiler": "12.2.16",
 		"@babel/code-frame": "7.16.7",
@@ -157,5 +163,10 @@
 		"build:website": "node ./scripts/build-website.mjs",
 		"vendors:bundle": "node ./scripts/vendors/bundle-vendors.mjs"
 	},
-	"browserslist": [ ">0.5%", "not ie 11", "not safari 5.1", "not op_mini all" ]
+	"browserslist": [
+		">0.5%",
+		"not ie 11",
+		"not safari 5.1",
+		"not op_mini all"
+	]
 }
