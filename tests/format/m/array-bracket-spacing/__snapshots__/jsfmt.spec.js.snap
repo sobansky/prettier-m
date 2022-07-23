@@ -17,3 +17,41 @@ const arr = () => {
 
 ================================================================================
 `;
+
+exports[`array-bracket-test.ts - {"arrayBracketSpacing":true} format 1`] = `
+====================================options=====================================
+arrayBracketSpacing: true
+parsers: ["babel", "babel-flow", "typescript"]
+printWidth: 80
+                                                                                | printWidth
+=====================================input======================================
+const arr = () => {
+	const days = ["Mon","Thue","Wed"];
+};
+
+=====================================output=====================================
+const arr = () => {
+  const days = [ "Mon", "Thue", "Wed" ];
+};
+
+================================================================================
+`;
+
+exports[`array-bracket-test.ts.bak - {"arrayBracketSpacing":true} format 1`] = `
+====================================options=====================================
+arrayBracketSpacing: true
+parsers: ["babel", "babel-flow", "typescript"]
+printWidth: 80
+                                                                                | printWidth
+=====================================input======================================
+const arr = () => {
+	const days = [ 'Mon', 'Thue', 'Wed' ];
+};
+
+=====================================output=====================================
+const arr = () => {
+  const days = [ "Mon", "Thue", "Wed" ];
+};
+
+================================================================================
+`;

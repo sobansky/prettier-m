@@ -71,7 +71,7 @@ module.exports = {
     escapeString: false,
     printBasicPrototype: false,
   },
-  testRegex: "jsfmt\\.spec\\.js$|__tests__/.*\\.js$",
+  testRegex: "jsfmt\\.spec\\.js$|__tests__/.*\\.js|m/.*\\.test.js$",
   testPathIgnorePatterns,
   collectCoverage: ENABLE_CODE_COVERAGE,
   collectCoverageFrom: ["<rootDir>/src/**/*.js", "<rootDir>/bin/**/*.js"],
