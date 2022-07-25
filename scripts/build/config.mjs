@@ -304,8 +304,8 @@ const coreBundles = [
     ],
   },
   {
-    input: "bin/prettier.js",
-    output: "bin-prettier.js",
+    input: "bin/prettier-m.js",
+    output: "bin-prettier-m.js",
     esbuildTarget: ["node0.10"],
     skipBabel: true,
   },

@@ -1,6 +1,7 @@
 {
 	"name": "prettier-m",
-	"version": "0.0.3",
+	"version": "0.1.0",
+	"prettier-version": "2.7.1",
 	"description": "Prettier-M is a less opinionated code formatter",
 	"bin": "./bin/prettier-m.js",
 	"repository": "sobansky/prettier-m",
