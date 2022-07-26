@@ -6,7 +6,9 @@ const semver = {
   gte: require("semver/functions/gte"),
 };
 const arrayify = require("../utils/arrayify.js");
-const currentVersion = require("../../package.json").version;
+// [prettier-m] read info from package.json
+const packageJson = require("../../package.json");
+const currentVersion = packageJson["prettier-version"];
 const coreOptions = require("./core-options.js").options;
 
 /**

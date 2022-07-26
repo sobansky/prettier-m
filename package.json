@@ -1,8 +1,9 @@
 {
 	"name": "prettier-m",
-	"version": "0.0.2",
+	"version": "0.1.1",
+	"prettier-version": "2.7.1",
 	"description": "Prettier-M is a less opinionated code formatter",
-	"bin": "./bin/prettier.js",
+	"bin": "./bin/prettier-m.js",
 	"repository": "sobansky/prettier-m",
 	"author": "MarBos",
 	"license": "MIT",
@@ -12,13 +13,7 @@
 	"engines": {
 		"node": ">=14"
 	},
-	"files": [
-		"index.js",
-		"standalone.js",
-		"src",
-		"bin",
-		"vendors"
-	],
+	"files": [ "index.js", "standalone.js", "src", "bin", "vendors" ],
 	"dependencies": {
 		"@angular/compiler": "12.2.16",
 		"@babel/code-frame": "7.16.7",
@@ -67,7 +62,8 @@
 		"minimist": "1.2.6",
 		"n-readlines": "1.0.1",
 		"outdent": "0.8.0",
-		"parse-srcset": "ikatyang/parse-srcset#54eb9c1cb21db5c62b4d0e275d7249516df6f0ee",
+		"parse-srcset": "^1.0.2",
+		"parse-entities": "3.0.0",
 		"please-upgrade-node": "3.2.0",
 		"postcss-less": "3.1.4",
 		"postcss-media-query-parser": "0.2.3",
@@ -77,7 +73,7 @@
 		"regexp-util": "1.2.2",
 		"remark-footnotes": "2.0.0",
 		"remark-math": "3.0.1",
-		"remark-parse": "8.0.3",
+		"remark-parse": "10.0.1",
 		"resolve": "1.22.0",
 		"sdbm": "2.0.0",
 		"semver": "7.3.7",
@@ -110,7 +106,7 @@
 		"enquirer": "2.3.6",
 		"esbuild": "0.14.42",
 		"esbuild-visualizer": "0.3.1",
-		"eslint": "8.14.0",
+		"eslint": "8.20.0",
 		"eslint-config-prettier": "8.5.0",
 		"eslint-formatter-friendly": "7.0.0",
 		"eslint-plugin-compat": "4.0.2",
@@ -145,8 +141,8 @@
 		"test:dist-standalone": "cross-env NODE_ENV=production TEST_STANDALONE=1 jest",
 		"test:integration": "jest tests/integration",
 		"test:dist-lint": "eslint --no-eslintrc --no-ignore --no-inline-config --config=./scripts/bundle-eslint-config.cjs \"dist/**/*.{js,mjs}\"",
-		"perf": "yarn && yarn build && cross-env NODE_ENV=production node ./dist/bin-prettier.js",
-		"perf:inspect": "yarn && yarn build && cross-env NODE_ENV=production node --inspect-brk ./dist/bin-prettier.js",
+		"perf": "yarn && yarn build && cross-env NODE_ENV=production node ./dist/bin-prettier-m.js",
+		"perf:inspect": "yarn && yarn build && cross-env NODE_ENV=production node --inspect-brk ./dist/bin-prettier-m.js",
 		"perf:benchmark": "yarn perf --debug-benchmark",
 		"lint": "run-p lint:*",
 		"lint:typecheck": "tsc",
@@ -163,10 +159,5 @@
 		"build:website": "node ./scripts/build-website.mjs",
 		"vendors:bundle": "node ./scripts/vendors/bundle-vendors.mjs"
 	},
-	"browserslist": [
-		">0.5%",
-		"not ie 11",
-		"not safari 5.1",
-		"not op_mini all"
-	]
+	"browserslist": [ ">0.5%", "not ie 11", "not safari 5.1", "not op_mini all" ]
 }

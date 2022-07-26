@@ -132,7 +132,7 @@ async function createBundle(bundleConfig, options) {
 
 async function preparePackage() {
   const packageJson = await readJson(path.join(PROJECT_ROOT, "package.json"));
-  packageJson.bin = "./bin-prettier.js";
+  packageJson.bin = "./bin-prettier-m.js";
   packageJson.engines.node = ">=10.13.0";
   delete packageJson.dependencies;
   delete packageJson.devDependencies;
