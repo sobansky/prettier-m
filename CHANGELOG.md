@@ -1,3 +1,15 @@
+# 0.2.0
+Fully working version with updated docs. There is also changed build of the package. It contains only standalone prettier-m. 
+# 0.1.0
+Created fully working version. Package of this version contains all necessary dependency packages.
+# 0.0.1
+Created the new fork from the Prettier, version 2.7.1. It has been named prettier-m where the suffix -m means 'more'. This formatter offers more options to change formatting way.
+
+### Advanced options
+* **arrayBracketSpacing** : Add spaces between array brackets 
+* **breakBeforeElse** : It allows to put <b>else </b> statement on the new line
+* **breakLongMethodChains** : Break method chains with more then 3 methods
+* **indentChains** : Put indents at the start of chained calls.
 # 2.7.1
 
 [diff](https://github.com/prettier/prettier/compare/2.7.0...2.7.1)

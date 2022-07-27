@@ -1,6 +1,6 @@
 {
 	"name": "prettier-m",
-	"version": "0.1.1",
+	"version": "0.2.0",
 	"prettier-version": "2.7.1",
 	"description": "Prettier-M is a less opinionated code formatter",
 	"bin": "./bin/prettier-m.js",
@@ -96,7 +96,7 @@
 		"@types/file-entry-cache": "5.0.2",
 		"@types/find-cache-dir": "3.2.1",
 		"@types/jest": "27.4.1",
-		"@typescript-eslint/eslint-plugin": "5.20.0",
+		"@typescript-eslint/eslint-plugin": "5.31.0",
 		"babel-jest": "27.5.1",
 		"benchmark": "2.1.4",
 		"browserslist-to-esbuild": "1.1.1",
